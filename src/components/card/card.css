@@ -1,0 +1,45 @@
+.card {
+    background-color: #ffffff; 
+    border-radius: 10px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    overflow: hidden; 
+    padding: 16px; 
+    width: 280px; 
+    margin: 16px;
+  }
+  
+  .card-cover {
+    width: 100%;
+    height: auto;
+  }
+  
+  .card-header, .card-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .carName {
+    color: #000000;
+    font-size: 18px; 
+    font-weight: bold; 
+  }
+  
+  .price {
+    color: #000000; 
+    font-size: 16px; 
+    font-weight: bold; 
+  }
+  
+  .like-button {
+    cursor: pointer;
+  }
+  
+  .card-description {
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+    max-height: 6.5em; 
+  }
+  

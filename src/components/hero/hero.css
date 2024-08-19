@@ -1,0 +1,76 @@
+.hero {
+    position: relative;
+    height: 700px;
+    background: linear-gradient( white, white, white,rgba(236, 248, 253, 0.821));
+    overflow: hidden; 
+  }
+  
+   .hero .container {
+    width: 100%;
+    height: 100%;
+  }
+  
+  .hero-carousel .carousel-item {
+    height: 100%; 
+    position: relative; 
+  }
+  
+  .carousel-image {
+    z-index: 30;
+    position: relative;
+    top:auto;
+    left: 50px;
+    width: 90%;
+    height: 90%;
+    object-fit:cover; 
+  }
+  
+  .ant-carousel .slick-prev,
+  .ant-carousel .slick-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 24px; 
+    color: #000; 
+    z-index: 1;
+  }
+
+  .ant-carousel .slick-prev {
+    left: 10px; 
+  }
+  
+  .ant-carousel .slick-next {
+    right: 10px; 
+  }
+  
+  .ant-carousel .slick-dots {
+    bottom: 10px;
+  }
+  
+  .ant-carousel .slick-dots li button {
+    background: #000; 
+  }
+  
+   .carousel-item {
+    position: relative;
+    text-align: right;
+  } 
+  
+  .car-name {
+    position: relative;
+    position: absolute;
+    bottom:  auto; 
+    left: 50%; 
+    transform: translateX(-50%); 
+    color: rgba(123, 117, 117, 0.8);
+    font-size: 55px; 
+    z-index: 10;
+    animation: dropIn 1s ease-out;
+  }
+
+  .hero__icons {
+    position: relative;
+    bottom:250px;
+    left:20px
+  }
+  

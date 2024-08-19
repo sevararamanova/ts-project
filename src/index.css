@@ -1,0 +1,11 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.container {
+    width: 1440px;
+    height:auto;
+    /* border:2px solid red; */
+    margin:0px auto;
+
+}

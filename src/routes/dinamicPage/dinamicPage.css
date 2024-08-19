@@ -1,0 +1,76 @@
+/* rentPage.css */
+
+/* Umumiy konteyner */
+.rent-page {
+    background-color: #f8f8f8; /* Yengil kulrang fon */
+    border-radius: 8px; /* Burchaklarni yumshatish */
+    padding: 20px; /* Ichki bo‘shliq */
+    max-width: 800px; /* Maksimal kenglik */
+    margin: 20px auto; /* Markazlashtirilgan */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Yumshoq soya */
+    font-family: Arial, sans-serif; /* Yaxshi o'qish uchun font */
+  }
+  
+  /* Rasm */
+  .rent-page-cover {
+    width: 100%; /* Rasmning to'liq kengligi */
+    height: auto; /* Rasmning balandligi avtomatik */
+    border-radius: 8px; /* Rasmning burchaklarini yumshatish */
+  }
+  
+  /* Sarlavha */
+  .rent-page-header {
+    display: flex;
+    justify-content: space-between; /* Sarlavha va like tugmasini bir qatorda joylashtirish */
+    align-items: center; /* Vertikal markazlashtirish */
+    margin-bottom: 20px; /* Pastki bo'shliq */
+  }
+  
+  /* Avtomobil nomi */
+  .carName {
+    font-size: 24px; /* Yirik sarlavha */
+    font-weight: bold; /* Qalin matn */
+    color: #333; /* Qora rang */
+  }
+  
+  /* Like tugmasi */
+  .like-button {
+    cursor: pointer; /* Pointer ko'rsatgichi */
+  }
+  
+  /* Ta'rif */
+  .rent-page-description {
+    margin-bottom: 20px; /* Pastki bo'shliq */
+    line-height: 1.6; /* Qator oralig'i */
+  }
+  
+  /* Narx va tugma */
+  .rent-page-footer {
+    display: flex;
+    justify-content: space-between; /* Narx va tugmani bir qatorda joylashtirish */
+    align-items: center; /* Vertikal markazlashtirish */
+  }
+  
+  /* Narx */
+  .price {
+    font-size: 20px; /* Narx uchun katta matn */
+    font-weight: bold; /* Qalin matn */
+    color: #333; /* Qora rang */
+  }
+  
+  /* Tugma */
+  .rent-button {
+    background-color: #007bff; /* Ko'k fon */
+    border: none; /* Chegara yo'q */
+    color: #fff; /* Oq matn */
+    padding: 10px 20px; /* Ichki bo'shliq */
+    border-radius: 5px; /* Yumshoq burchaklar */
+    font-size: 16px; /* O'rtacha matn o'lchami */
+    cursor: pointer; /* Pointer ko'rsatgichi */
+    transition: background-color 0.3s; /* Yumshoq fon rangini o'zgarishi */
+  }
+  
+  .rent-button:hover {
+    background-color: #0056b3; /* Hover holatida rangni o'zgartirish */
+  }
+  
