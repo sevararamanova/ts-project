@@ -1,76 +1,93 @@
-/* rentPage.css */
+.rent {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
 
-/* Umumiy konteyner */
 .rent-page {
-    background-color: #f8f8f8; /* Yengil kulrang fon */
-    border-radius: 8px; /* Burchaklarni yumshatish */
-    padding: 20px; /* Ichki bo‘shliq */
-    max-width: 800px; /* Maksimal kenglik */
-    margin: 20px auto; /* Markazlashtirilgan */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Yumshoq soya */
-    font-family: Arial, sans-serif; /* Yaxshi o'qish uchun font */
-  }
-  
-  /* Rasm */
-  .rent-page-cover {
-    width: 100%; /* Rasmning to'liq kengligi */
-    height: auto; /* Rasmning balandligi avtomatik */
-    border-radius: 8px; /* Rasmning burchaklarini yumshatish */
-  }
-  
-  /* Sarlavha */
-  .rent-page-header {
-    display: flex;
-    justify-content: space-between; /* Sarlavha va like tugmasini bir qatorda joylashtirish */
-    align-items: center; /* Vertikal markazlashtirish */
-    margin-bottom: 20px; /* Pastki bo'shliq */
-  }
-  
-  /* Avtomobil nomi */
-  .carName {
-    font-size: 24px; /* Yirik sarlavha */
-    font-weight: bold; /* Qalin matn */
-    color: #333; /* Qora rang */
-  }
-  
-  /* Like tugmasi */
-  .like-button {
-    cursor: pointer; /* Pointer ko'rsatgichi */
-  }
-  
-  /* Ta'rif */
-  .rent-page-description {
-    margin-bottom: 20px; /* Pastki bo'shliq */
-    line-height: 1.6; /* Qator oralig'i */
-  }
-  
-  /* Narx va tugma */
-  .rent-page-footer {
-    display: flex;
-    justify-content: space-between; /* Narx va tugmani bir qatorda joylashtirish */
-    align-items: center; /* Vertikal markazlashtirish */
-  }
-  
-  /* Narx */
-  .price {
-    font-size: 20px; /* Narx uchun katta matn */
-    font-weight: bold; /* Qalin matn */
-    color: #333; /* Qora rang */
-  }
-  
-  /* Tugma */
-  .rent-button {
-    background-color: #007bff; /* Ko'k fon */
-    border: none; /* Chegara yo'q */
-    color: #fff; /* Oq matn */
-    padding: 10px 20px; /* Ichki bo'shliq */
-    border-radius: 5px; /* Yumshoq burchaklar */
-    font-size: 16px; /* O'rtacha matn o'lchami */
-    cursor: pointer; /* Pointer ko'rsatgichi */
-    transition: background-color 0.3s; /* Yumshoq fon rangini o'zgarishi */
-  }
-  
-  .rent-button:hover {
-    background-color: #0056b3; /* Hover holatida rangni o'zgartirish */
-  }
-  
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: linear-gradient( rgb(178, 203, 231),rgb(255, 254, 254),white,rgba(237, 250, 255, 0.821));
+  padding: 150px 30px;
+}
+
+.rent-flex {
+  display: flex;
+  flex-direction: row;
+  gap: 50px; 
+  align-items: flex-start;
+  width: 100%;
+}
+
+.rent-page-cover {
+ 
+  flex: 1;
+  max-width: 500px; 
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  object-fit: cover;
+  transition: transform 0.3s ease; 
+}
+
+.rent-page-cover:hover {
+  transform: scale(1.05); 
+}
+
+.rent-page-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.carName {
+  font-size: 28px; 
+  font-weight: bold;
+  color: #333; 
+}
+
+.like-button {
+  cursor: pointer;
+  transition: color 0.3s ease; 
+}
+
+.like-button:hover {
+  color: #e74c3c; 
+}
+
+.rent-page-description {
+  margin-top: 20px;
+  font-size: 16px; 
+  line-height: 1.6; 
+  color: #666; 
+  width: 100%;
+}
+
+.rent-page-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin-top: 20px;
+} 
+
+.price {
+  font-size: 24px; 
+  font-weight: bold;
+  color: #333;
+}
+
+.rent-button {
+  background-color: #1890ff; 
+  border: none;
+  color: #fff;
+  border-radius: 5px; 
+  padding: 10px 20px;
+  transition: background-color 0.3s ease; 
+}
+
+.rent-button:hover {
+  background-color: #40a9ff; 
+}

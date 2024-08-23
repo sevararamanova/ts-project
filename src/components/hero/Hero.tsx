@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import icons from '../../images/icons.png'
+import icons from '../../images/icons.png';
 import { Carousel } from 'antd';
 import axios from 'axios';
 import './hero.css';
@@ -44,6 +44,7 @@ const Hero: React.FC = () => {
   return (
     <div className="hero">
       <div className="container">
+        <div className='hero__content'>
         {isLoading ? (
           <div className="loading">Loading...</div>
         ) : error ? (
@@ -62,10 +63,12 @@ const Hero: React.FC = () => {
             )}
           </Carousel>
         )}
-         <div className='hero__icons'>
-            <img src={icons}/>
+        <div className='hero__icons'>
+            <img src={icons} width={40}/>
         </div>
+         </div>
       </div>
+      
     </div>
   );
 };

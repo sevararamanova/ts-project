@@ -1,29 +1,31 @@
-.footer{
-    background: linear-gradient( rgba(236, 248, 253, 0.821), white);
-    padding: 20px 40px;
-  
+.footer {
+  background: linear-gradient(rgba(236, 248, 253, 0.821), white);
+ 
 }
 
 .footer__content {
-    margin-top: 100px;
-     height: 480px;
-    display: flex;
-    justify-content: space-around;
+  padding:150px 30px ;
+  height: 480px;
+  display: flex;
+  justify-content: space-around;
 }
 
 .footer__content p {
-    color: grey;
-    margin-top: 30px;
+  color: grey;
+  margin-top: 30px;
 }
 
-.subfooter{
-    display: flex;
-    justify-content: space-between;
-    margin-top: 40px;
-    padding: 20px;
-
+.subfooter {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 40px;
+  padding: 20px;
 }
 
 .second {
-   display: flex;
+  display: flex;
+}
+
+.footer hr {
+   border: 1px solid blue;
 }

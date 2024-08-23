@@ -2,10 +2,16 @@
 @tailwind components;
 @tailwind utilities;
 
-.container {
-    width: 1440px;
-    height:auto;
-    /* border:2px solid red; */
-    margin:0px auto;
+* {
+  font-family: Arial, Helvetica, sans-serif;
+  box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
+}
 
+.container {
+  width: 1440px;
+  height: auto;
+  /* border:2px solid red;  */
+  margin: 0px auto;
 }

@@ -20,7 +20,7 @@ const Cars = ({data, title, isLoading} : Props) => {
         {
             isLoading ? <div>Loading</div> 
                 : 
-            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-10">
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-3 gap-6">
             {
                 data?.map(car => 
                     <Card key={car._id} car={car}/>

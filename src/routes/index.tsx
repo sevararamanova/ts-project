@@ -1,23 +1,50 @@
-// RouteController.jsx
+
 import { useRoutes } from 'react-router-dom';
 import Home from './home/Home';
-import DinamicPage from '../routes/dinamicPage/DinamicPage'; // RentPage komponentini import qilish
+import AuthLayout from '../routes/auth/AuthLayout';
+import DinamicPage from '../routes/dinamicPage/DinamicPage';
+import Dashboard from '../routes/dashboard/Dashboard';
+import Create from '../routes/dashboard/create/Create';
+import SignIn from './auth/SignIn';
+import SignUp from './auth/SignUp';
 
 const RouteController = () => {
-  return useRoutes([
+  const routes = useRoutes([
     {
       path: '/',
-      element: <Home />
+      element: <Home />,
+    },
+    {
+      path: 'auth',
+      element: <AuthLayout />,
+      children: [
+        {
+          path: 'signin',
+          element: <SignIn />,
+        },
+        {
+          path: 'signup',
+          element: <SignUp />,
+        },
+      ],
     },
     {
       path: 'dashboard',
-      element: <div>Dashboard</div>
+      element: <Dashboard />,
+      children: [
+        {
+          path: 'create',
+          element: <Create />,
+        },
+      ],
     },
     {
-      path: 'rent/:carId', // Dinamik sahifa uchun yo'nalish
-      element: <DinamicPage /> // Dinamik sahifa uchun komponent
-    }
+      path: 'rent/:carId',
+      element: <DinamicPage />,
+    },
   ]);
+
+  return routes;
 };
 
 export default RouteController;

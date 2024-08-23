@@ -34,7 +34,62 @@ export type Car = {
     usage_per_km: number,
 }
 
+export type Category = {
+    _id: string,
+    name: string,
+    image: string,
+    status: string,
+    createdAt: string,
+    updatedAt: string,
+    __v: number
+}
+
 export type FetchCar = {
     message: string,
     payload: Car[]
+}
+
+export type FetchCategory = {
+    message: string,
+    payload: Category[]
+}
+
+
+export interface LoginRequest {
+    email: string;
+    password: string;
+  }
+  
+  export interface LoginResponse {
+    token: string;
+    user: {
+      id: string;
+      email: string;
+    
+    };
+  }
+  
+ 
+  export interface RegisterRequest {
+    email: string;
+    password: string;
+    confirmPassword?: string; 
+  }
+  
+  export interface RegisterResponse {
+    message: string;
+    user?: {
+      id: string;
+      email: string;
+    };
+  }
+
+  export type UploadImages = {
+    message: string,
+    payload: string[]
+}
+
+export type UploadImage = {
+    message: string,
+    payload: string
 }
