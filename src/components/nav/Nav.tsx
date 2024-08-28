@@ -8,8 +8,12 @@ import notification from '../../images/Notification.png';
 import profil from '../../images/Profil.png';
 import settings from '../../images/Settings.png';
 import './nav.css';
+import { useSelector } from 'react-redux';
+import { RootState } from '../../redux/store';
 
 function Nav() {
+  const likedCount = useSelector((state: RootState) => state.likedCards.likedCards.length);
+
   return (
     <div className="navbar">
       <div className="container">
@@ -23,8 +27,9 @@ function Nav() {
           />
 
           <div className="navbar__links">
-            <Link to="/likes" className="navbar__link">
+            <Link to="/likedPage" className="navbar__link">
               <img src={like} alt="Likes" className="navbar__icon" />
+              {likedCount > 0 && <span className="like-count">{likedCount}</span>}
             </Link>
             <Link to="/notifications" className="navbar__link">
               <img src={notification} alt="Notifications" className="navbar__icon" />

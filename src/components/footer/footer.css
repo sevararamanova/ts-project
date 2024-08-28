@@ -1,6 +1,5 @@
 .footer {
   background: linear-gradient(rgba(236, 248, 253, 0.821), white);
- 
 }
 
 .footer__content {
@@ -28,4 +27,7 @@
 
 .footer hr {
    border: 1px solid blue;
+
 }
+
+

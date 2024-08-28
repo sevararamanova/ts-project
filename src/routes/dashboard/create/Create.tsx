@@ -15,7 +15,7 @@ const Create = () => {
       setCurrent(prev => prev + 1);
     } else {
       console.log("Navigating to auth")
-      navigate('/auth/login'); 
+      navigate('/auth/signin'); 
     }
   };
 

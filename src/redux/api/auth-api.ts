@@ -1,46 +1,37 @@
+import { SignUpType, LoginRequest, LoginResponse } from "../../types/dataTypes";
 import { api } from "./index";
-
-// Define response and request types
-interface LoginResponse {
-  token: string;
-  user: {
-    id: string;
-    email: string;
-  };
-}
-
-interface RegisterResponse {
-  message: string;
-}
-
-interface LoginRequest {
-  email: string;
-  password: string;
-}
-
-interface RegisterRequest {
-  email: string;
-  password: string;
-  confirmPassword: string;
-}
 
 const authApi = api.injectEndpoints({
   endpoints: (build) => ({
-    login: build.mutation<LoginResponse, LoginRequest>({
-      query: (credentials) => ({
-        url: "/auth/signin",
+    signUp: build.mutation<SignUpType, any>({
+      query: (body) => ({
+        url: "/auth/sign-up",
         method: "POST",
-        body: credentials,
+        body,
       }),
     }),
-    register: build.mutation<RegisterResponse, RegisterRequest>({
-      query: (user) => ({
-        url: "/auth/sign-up/", // Updated path to match the backend
+    signIn: build.mutation<LoginResponse, LoginRequest>({
+      query: (body) => ({
+        url: "/auth/sign-in",
         method: "POST",
-        body: user,
+        body,
+      }),
+    }),
+    verifyOtp: build.mutation<{ token: string }, { email: string; otp: string }>({
+      query: (data) => ({
+        url: "/auth/send-otp",
+        method: "POST",
+        body: data,
+      }),
+    }),
+    resendOtp: build.mutation<{ token: string }, { email: string }>({
+      query: (data) => ({
+        url: "/auth/resend-otp",
+        method: "POST",
+        body: data,
       }),
     }),
   }),
 });
 
-export const { useLoginMutation, useRegisterMutation } = authApi;
+export const { useSignUpMutation, useSignInMutation, useVerifyOtpMutation, useResendOtpMutation } = authApi;

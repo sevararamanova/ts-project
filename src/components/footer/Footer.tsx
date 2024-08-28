@@ -34,7 +34,9 @@ const Footer = () => {
             <p>Facebook</p>
           </div>
         </div>
+        </div>
         <hr></hr>
+       
         <div className='subfooter'>
           <div className='first'>
             <p>©2022 MORENT. All rights reserved</p>
@@ -44,8 +46,11 @@ const Footer = () => {
             <p>Terms & Condition</p>
           </div>
         </div>
+
+       
+    
       </div>
-    </div>
+  
   )
 }
 

@@ -1,10 +1,11 @@
-import { useLoginMutation } from '../../redux/api/index';
+import { useSignInMutation } from '../../../redux/api/auth-api';
+
 import { useNavigate } from 'react-router-dom';
 import { Form, Input, Button, message } from 'antd';
-import { LoginRequest } from '../../types/dataTypes';
+import { LoginRequest } from '../../../types/dataTypes';
 
 const SignIn = () => {
-  const [login, { isLoading }] = useLoginMutation();
+  const [login, { isLoading }] = useSignInMutation();
   const [form] = Form.useForm();
   const navigate = useNavigate();
 
@@ -21,9 +22,9 @@ const SignIn = () => {
   };
 
   return (
-    <div className="p-5 flex items-center justify-center bg-gray-100 min-h-full">
+    <div >
       <div className="max-w-sm w-full bg-white p-8 rounded-lg shadow-lg">
-        <h2 className="text-2xl font-bold mb-6 text-center">Sign In</h2>
+        <h2 className="text-2xl font-bold mb-6 text-center">Login</h2>
         <Form form={form} onFinish={onFinish} layout="vertical">
           <Form.Item
             name="email"
@@ -50,7 +51,7 @@ const SignIn = () => {
           <Button
             type="link"
             onClick={() => navigate('/auth/signup')} 
-            className="ml-2 text-blue-500 hover:text-blue-600"
+            className="ml-2 text-blue-500 hover:text-black-600"
           >
             Sign Up
           </Button>

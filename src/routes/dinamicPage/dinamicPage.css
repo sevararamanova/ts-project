@@ -2,13 +2,13 @@
   display: flex;
   flex-direction: column;
   min-height: 100vh;
+  background: linear-gradient( rgb(178, 203, 231),rgb(255, 254, 254),rgb(183, 209, 236));
 }
 
 .rent-page {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background: linear-gradient( rgb(178, 203, 231),rgb(255, 254, 254),white,rgba(237, 250, 255, 0.821));
   padding: 150px 30px;
 }
 
@@ -21,7 +21,6 @@
 }
 
 .rent-page-cover {
- 
   flex: 1;
   max-width: 500px; 
   width: 100%;

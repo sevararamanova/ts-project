@@ -5,13 +5,13 @@ import { HeartOutlined, HeartFilled } from '@ant-design/icons';
 import { Car } from '../../types/dataTypes';
 import parse from 'html-react-parser';
 import Footer from '../../components/footer/Footer';
-import './dinamicPage.css'; 
+import './dinamicPage.css';
 
 const DinamicPage: React.FC = () => {
   const { carId } = useParams<{ carId: string }>();
   const [car, setCar] = useState<Car | null>(null);
   const [liked, setLiked] = useState<boolean>(false);
-  const navigate = useNavigate(); 
+  const navigate = useNavigate();
 
   useEffect(() => {
     const fetchCarDetails = async () => {
@@ -46,7 +46,7 @@ const DinamicPage: React.FC = () => {
   };
 
   const handleRentNow = () => {
-    navigate('/auth/signin'); 
+    navigate('/auth/signin');
   };
 
   if (!car) {
@@ -55,6 +55,7 @@ const DinamicPage: React.FC = () => {
 
   return (
     <div className="rent">
+      <div className='container'>
         <div className='rent-page'>
           <div className='rent-flex'>
             <img className="rent-page-cover" src={car.thumbnail} alt={car.name} />
@@ -62,7 +63,7 @@ const DinamicPage: React.FC = () => {
               <div className="rent-page-header">
                 <div className="carName">{car.name}</div>
                 <div className="like-button" onClick={handleLike}>
-                  {liked ? <HeartFilled style={{ color: 'red', fontSize: '20px' }} /> : <HeartOutlined style={{ fontSize: '20px' }} />}
+                  {liked ? <HeartFilled style={{ color: 'red', fontSize: '30px' }} /> : <HeartOutlined style={{ fontSize: '30px' }} />}
                 </div>
               </div>
               <div className="rent-page-description">
@@ -75,7 +76,8 @@ const DinamicPage: React.FC = () => {
             </div>
           </div>
         </div>
-       <Footer /> 
+      </div>
+      <Footer />
     </div>
   );
 };

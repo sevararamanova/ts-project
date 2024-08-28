@@ -1,36 +1,35 @@
-import { Car } from "../../types/dataTypes";
-import { Typography } from "antd";
-import Card from "../card/Card";
-import './cars.css'
+import { Typography } from 'antd';
+import { Car } from '../../types/dataTypes';
+import CardComponent from '../../components/card/Card';
+import './cars.css';
 
-const {Title} = Typography
+const { Title } = Typography;
 
-type Props = {
-    title: string,
-    data: Car[] | undefined,
-    isLoading: boolean
+interface CarsProps {
+    title: string;
+    data: Car[] | undefined;
+    isLoading: boolean;
 }
 
-const Cars = ({data, title, isLoading} : Props) => {
-  return (
-    <div className="cars">
-    <div className="container">
-        <Title level={2}>{title}</Title>
+const Cars = ({ data, title, isLoading }: CarsProps) => {
+    if (isLoading) return <div>Loading...</div>;
 
-        {
-            isLoading ? <div>Loading</div> 
-                : 
-            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-3 gap-6">
-            {
-                data?.map(car => 
-                    <Card key={car._id} car={car}/>
-                )
-            }
+    return (
+        <div className="cars">
+            <div className="container">
+                <Title level={1}>{title}</Title>
+                {data && data.length ? (
+                    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-3 gap-6">
+                        {data.map(car => (
+                            <CardComponent key={car._id} car={car} />
+                        ))}
+                    </div>
+                ) : (
+                    <div>No cars available</div>
+                )}
             </div>
-        }
-    </div>
-    </div>
-  )
-}
+        </div>
+    );
+};
 
-export default Cars
+export default Cars;
